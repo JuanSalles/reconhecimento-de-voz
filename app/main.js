@@ -73,6 +73,8 @@ botaoComecar.addEventListener('click', () => {
 
     mensagem.textContent = "";
     resultado.textContent = "";
+    botaoTentar.disabled = true;
+    formPokemon.style.display = "none"
 
     esperaPokemon();
 
