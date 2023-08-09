@@ -1,0 +1,94 @@
+@import url('https://fonts.cdnfonts.com/css/seven-segment');
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Seven Segment', sans-serif;
+    --bg-color: #0D0D0D;
+    --primary-color: #F2CB05;
+    --secondary-color: #0D0D0D;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-family);
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.mensagem {
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+.box {
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    display: inline-block;
+    font-size: 4em;
+    padding: 10px;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('./assets/pokebola.png');
+    background-size:cover;
+}
+
+.container-botoes{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.container-botoes button{
+    width: 100px;
+    font-family: var(--font-family);
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+.container-botoes button:hover{
+    font-size: 1em;
+}
+
+.container-botoes button:disabled{
+    display: none;
+}
+
+input{
+    background-color: transparent;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.poke-form{
+    display: none;
+}
+
+
+input::placeholder{
+    color: var(--primary-color);
+}
+
+input:focus::placeholder{
+    opacity: 0;
+}
