@@ -40,6 +40,8 @@ function speechToText(pokemon) {
         nomeDoPokemon.textContent = `Você disse: ${texto}?`;
 
         jogo(texto, pokemon.nome);
+
+        recognition.stop(); 
     };
 
     recognition.onerror = (e) =>{
@@ -48,6 +50,8 @@ function speechToText(pokemon) {
         mensagem.textContent = "Tente outra vez ou digite sua resposta!"
         formPokemon.style.display = "flex"
         botaoTentar.disabled = false;
+
+        recognition.stop(); 
     };
     
 };
@@ -92,8 +96,10 @@ botaoTentar.addEventListener("click", () => {
 formPokemon.addEventListener("submit", (event) =>{
     event.preventDefault();
 
-    const nomeDoPokemon = event.target.elements["input-nome"].value;
+    const pokeName = event.target.elements["input-nome"].value;
 
-    jogo(nomeDoPokemon, pokemon.nome);
+    nomeDoPokemon.textContent = `Você disse: ${pokeName}?`;
+
+    jogo(pokeName, pokemon.nome);
 
 })
