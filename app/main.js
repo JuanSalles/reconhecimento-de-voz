@@ -39,6 +39,7 @@ function speechToText(pokemon) {
 
         nomeDoPokemon.textContent = `Você disse: ${texto}?`;
 
+        console.log(texto, pokemon.nome);
         jogo(texto, pokemon.nome);
 
         recognition.stop(); 
@@ -70,11 +71,14 @@ function jogo (first, second){
         formPokemon.style.display = "flex"
         botaoTentar.disabled = false;
     }
+
+    botaoComecar.disabled = false;
 }
 
 
 botaoComecar.addEventListener('click', () => {
 
+    botaoComecar.disabled = true;
     mensagem.textContent = "";
     resultado.textContent = "";
     botaoTentar.disabled = true;
