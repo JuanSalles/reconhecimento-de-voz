@@ -3,6 +3,8 @@
 
 <h4>Uma fusão entre a atividade proposta no cursa da ALURA e API de pokemon</h4>
 
+<a href="https://pokevoicegame.vercel.app/">LINK DO PROJETO</a>
+
 pokeAPI = https://pokeapi.co/ <br>
 WEB SPEECH API = https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
 
